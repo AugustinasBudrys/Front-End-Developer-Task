@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>To-Do</title>
+	<link rel="stylesheet" href="css/todo.css">
+	<script src = "js/todo.js"></script>
+</head>
+<body>
+	<form onsubmit="addTask(event)">
+		<fieldset>
+			<label for ="description">Description:</label>
+			<input type = "text" name = "decsription" id = "description" maxlength="160" required><br/>
+			<label for = "deadline">Deadline:</label>
+			<input type = "datetime-local" name = "deadline" id = "deadline"><br/>
+			
+			<input type="submit" value="add" id='add'/>
+		</fieldset>
+	</form>
+	<div>
+		<table>
+			<thead>
+				<tr>
+					<th>Description</th>
+					<th>Time left</th>
+					<th>Completed</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody id='taskList'>
+
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
